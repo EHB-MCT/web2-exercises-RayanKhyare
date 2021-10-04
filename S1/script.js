@@ -1,56 +1,77 @@
 "use strict";
 
-
 window.onload = function () {
 
     console.log("loaded");
+
+    const dishes = [];
+
+    dishes.push(...[{
+        id: '1',
+        name: 'Chicken wings',
+        price: '10'
+    }, {
+        id: '2',
+        name: 'Banana',
+        price: '7'
+    }])
+
+
+
+    console.log(dishes);
+
+    let radiobtn = "";
+    const radioContainer = document.getElementById("radioContainer");
+
+
+    dishes.forEach(dish => {
+        console.log(dish);
+
+        radiobtn += `<label for="dishRadio">${dish.name}</label>
+            <input type="radio" id="dishRadio" name="arrayForm" value="${dish.name}">`
+    })
+
+    radioContainer.insertAdjacentHTML("beforeend", radiobtn);
+
+
 
     document.getElementById("form").addEventListener("submit", e => {
         e.preventDefault();
 
         // Exercice 4&5 //
 
-        // const name = document.getElementById("nameInput").value;
-        // const email = document.getElementById("emailInput").value;
+        const name = document.getElementById("nameInput").value;
+        const email = document.getElementById("emailInput").value;
         // const order = document.getElementById("orderInput").value;
 
-        // let person = {
-        //     name: name,
-        //     email: email,
-        //     order: order
-        // }
+        const radioValue = document.querySelector('input[name="arrayForm"]:checked').value;
 
-        // function printOrder(name, email, order) {
+        let person = {
+            name: name,
+            email: email,
+            order: radioValue
+        }
 
-        //     let container = document.getElementById("container");
+        function printOrder(name, email, order) {
 
-        //     let htmlString = `<p>The order for the customer <b>${name}</b> is the following: <b>${order}</b>. The customer may be notified by email: <b>${email}</b></p>`;
+            let container = document.getElementById("container");
 
-        //     container.insertAdjacentHTML("beforeend", htmlString);
-        //     console.log(name);
-        // }
+            let htmlString = `<p>The order for the customer <b>${name}</b> is the following: <b>${order}</b>. The customer may be notified by email: <b>${email}</b></p>`;
 
-        // printOrder(person.name, person.email, person.order);
+            container.insertAdjacentHTML("beforeend", htmlString);
+            console.log(name);
+        }
+
+
+        printOrder(person.name, person.email, person.order);
     })
 
     //Exercice 6//
 
 
-    document.getElementById("radioForm").addEventListener("submit", e => {
-        e.preventDefault();
 
-        const dishes = [];
-        dishes.push({
-            id: '1',
-            name: 'Chicken wings',
-            price: '10'
-        })
 
-        const radio = document.querySelectorAll('input[name="arrayForm"]');
-        console.log(radio);
 
-        console.log(dishes[0].name);
-    })
 
 
 
