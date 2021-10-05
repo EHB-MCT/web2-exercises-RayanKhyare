@@ -17,5 +17,6 @@ input[type=email] {
 }
 
 input[type=radio] {
-    padding: 12px 20px;
+    padding: 20px 20px;
+
 }

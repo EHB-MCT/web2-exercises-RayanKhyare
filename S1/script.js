@@ -4,6 +4,8 @@ window.onload = function () {
 
     console.log("loaded");
 
+    //Exercice 6//
+
     const dishes = [];
 
     dishes.push(...[{
@@ -16,13 +18,10 @@ window.onload = function () {
         price: '7'
     }])
 
-
-
     console.log(dishes);
 
     let radiobtn = "";
     const radioContainer = document.getElementById("radioContainer");
-
 
     dishes.forEach(dish => {
         console.log(dish);
@@ -32,8 +31,6 @@ window.onload = function () {
     })
 
     radioContainer.insertAdjacentHTML("beforeend", radiobtn);
-
-
 
     document.getElementById("form").addEventListener("submit", e => {
         e.preventDefault();
@@ -65,16 +62,6 @@ window.onload = function () {
 
         printOrder(person.name, person.email, person.order);
     })
-
-    //Exercice 6//
-
-
-
-
-
-
-
-
 
 
 

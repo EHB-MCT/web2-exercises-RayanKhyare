@@ -1,0 +1,46 @@
+#box {
+    margin: 10px;
+    width: 20%;
+    background-color: #F2F2F2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#box img {
+    width: 100%;
+
+}
+
+#boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+h2 {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+p {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+button {
+    padding: 10px 50px 10px 50px;
+    margin: 0;
+    background-color: rgb(222, 191, 252);
+    border-radius: 10px;
+    border-color: white;
+    margin-bottom: 10px;
+
+}
