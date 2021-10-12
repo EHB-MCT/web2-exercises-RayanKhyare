@@ -19,7 +19,8 @@ window.onload = function () {
         fetchMovie().then(movie => {
             console.log(movie);
 
-        
+            let apiRuntime = movie.Runtime;
+
 
 
             let container = document.getElementById("container");
