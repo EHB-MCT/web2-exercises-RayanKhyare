@@ -6,7 +6,7 @@ const data = {
     datasets: [{
         axis: 'y',
         label: 'Rayan Khyare',
-        data: [9, 9, 7, 5, 8, 4],
+        data: [9, 9, 8, 5, 8, 4],
         fill: false,
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
