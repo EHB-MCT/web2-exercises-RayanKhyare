@@ -11,6 +11,7 @@ window.onload = function () {
     fetchGames().then(data => {
         console.log(data);
 
+
         let gameName = data.results[0].name;
         let gameImg = data.results[0].background_image;
         let gameMetacritic = data.results[0].metacritic;
